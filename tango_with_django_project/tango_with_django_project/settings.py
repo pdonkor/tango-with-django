@@ -26,7 +26,6 @@ SECRET_KEY = '0_gqn32leuhl-y&kw+f!t6l&0nfe0cgc&dccg_t0fl47e2+kj7'
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 
 
@@ -59,7 +58,6 @@ ROOT_URLCONF = 'tango_with_django_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,6 +69,8 @@ TEMPLATES = [
         },
     },
 ]
+#'DIRS': [TEMPLATE_DIR, ],
+
 
 WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
 
@@ -121,5 +121,3 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-
-STATIC_URL = '/static/'
