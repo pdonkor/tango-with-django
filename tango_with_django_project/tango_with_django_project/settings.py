@@ -26,6 +26,7 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '0_gqn32leuhl-y&kw+f!t6l&0nfe0cgc&dccg_t0fl47e2+kj7'
+LOGIN_URL = 'rango:login'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -106,6 +107,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': { 'min_length': 6, }
+
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
